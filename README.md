@@ -54,6 +54,8 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 ### The Examples
 
 * [score](score/README.md)
+* [clock](clock/README.md)
+
 ## Authors
 
 **Alanna Kelly** - https://www.twitter.com/alannakelly_ie
