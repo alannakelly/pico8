@@ -32,7 +32,7 @@ cd pico8
 
 Start PICO-8 in the current directory
 ```
-pico8 -home . -desktop .
+pico8 -home ./home -desktop ./desktop
 ```
 
 Load an example in pico-8.
