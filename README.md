@@ -53,8 +53,9 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 
 ### The Examples
 
-* [score](score/README.md)
-* [clock](clock/README.md)
+* [score](home/carts/score/README.md)
+* [clock](home/carts/clock/README.md)
+* [mosue](home/carts/mouse/README.md)
 
 ## Authors
 
