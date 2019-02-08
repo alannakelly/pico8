@@ -32,9 +32,11 @@ end
 -- this function draws the hex
 -- grid.
 function draw_grid(grid,x,y)
-		-- loop throe the grid
+		-- loop throw the grid
 		-- use grid-1 because array
-		-- is indexed from 1.
+		-- is indexed from 1. when
+		-- drawing offsets from 0
+		-- work better.
   for row=0,#grid-1 do
     for col=0,#grid[row+1]-1 do
       xp=x + col*16
@@ -42,10 +44,10 @@ function draw_grid(grid,x,y)
       -- draw, -8 from xp to make
       -- hex tiles interlace
       -- properly
-      if r%2 != 0 then
-	       spr(grid[r+1][c+1],xp,y,2,2)
+      if row%2 != 0 then
+	       spr(grid[row+1][col+1],xp,y,2,2)
 	     else
-	       spr(grid[r+1][c+1],xp-8,y,2,2)
+	       spr(grid[row+1][col+1],xp-8,y,2,2)
 	     end
     end
     -- y changes at + 3/4 of a
