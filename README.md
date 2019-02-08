@@ -9,7 +9,7 @@ These instructions will get you up and running with the examples.
 ### Prerequisites
 
 * Lexaloffe's [PICO-8](https://www.lexaloffe.com/pico-8.php).
-* Git [Git](https://git-scm.com/).
+* [Git](https://git-scm.com/).
 
 ### Installing
 
@@ -55,7 +55,7 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 
 * [score](home/carts/score/README.md)
 * [clock](home/carts/clock/README.md)
-* [mosue](home/carts/mouse/README.md)
+* [mouse](home/carts/mouse/README.md)
 
 ## Authors
 
