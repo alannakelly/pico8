@@ -49,15 +49,16 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 * Examples are each in their own directory.
 * Examples must have a README.md file in their directory.
 * An optimized version of an existing example must be in its own directory. Optimisations are to be clearly explained in the README.md file.
-* 
+* Add yourself to the Authors & Contributors section (If you like).
 
 ### The Examples
 
 * [score](home/carts/score/README.md)
 * [clock](home/carts/clock/README.md)
 * [mouse](home/carts/mouse/README.md)
+* [hextiles](home/carts/hextiles/README.md)
 
-## Authors
+## Authors & Contributors
 
 **Alanna Kelly** - https://www.twitter.com/alannakelly_ie
 
