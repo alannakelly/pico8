@@ -53,10 +53,11 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 
 ### The Examples
 
-* [score](home/carts/score/README.md)
-* [clock](home/carts/clock/README.md)
-* [mouse](home/carts/mouse/README.md)
-* [hextiles](home/carts/hextiles/README.md)
+* [score](home/carts/score/README.md) - An example of using large numbers in PICO-8.
+* [clock](home/carts/clock/README.md) - A analogue clock implemented in PICO-8.
+* [mouse](home/carts/mouse/README.md) - How to use mouse input in PICO-8.
+* [hextiles](home/carts/hextiles/README.md) - How to render hexagonal tiles using sprites.
+* [raycast](home/carts/raycast/README.md) - An implementation of a classic raycaster 3D engine.
 
 ## Authors & Contributors
 
