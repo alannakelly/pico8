@@ -84,52 +84,52 @@ function draw_view()
   -- cast some rays
   for x=0,127 do
   
-  -- tile ray hits
-  local tile=0
-  local distance=0
+    -- tile ray hits
+    local tile=0
+    local distance=0
  
-  -- calculate step
-  local step_x = cos(ray.angle)*ray_step
-  local step_y = sin(ray.angle)*ray_step 
+    -- calculate step
+    local step_x = cos(ray.angle)*ray_step
+    local step_y = sin(ray.angle)*ray_step 
 
-  -- reset ray start point
-  ray.x = player.x
-  ray.y = player.y
+    -- reset ray start point
+    ray.x = player.x
+    ray.y = player.y
 
-  local distance=0
-  -- cast a ray across the
-  -- world map
-  repeat
-    -- march the ray
-    ray.x+=step_x       
-    ray.y+=step_y
-    distance+=ray_step
-    -- get tile at ray position
-    tile=world[flr(ray.x)][flr(ray.y)]
-  until(tile!=0) 
+    local distance=0
+    -- cast a ray across the
+    -- world map
+    repeat
+      -- march the ray
+      ray.x+=step_x       
+      ray.y+=step_y
+      distance+=ray_step
+      -- get tile at ray position
+      tile=world[flr(ray.x)][flr(ray.y)]
+    until(tile!=0) 
   
-  -- calculate wall height 
-  -- based on distance
-  local half_height=((1/distance)*120)/2
+    -- calculate wall height 
+    -- based on distance
+    local half_height=((1/distance)*120)/2
   
-  -- calculate top and bottom y
-  -- position of wall
-  local top=63-half_height
-  local bot=63+half_height
+    -- calculate top and bottom y
+    -- position of wall
+    local top=63-half_height
+    local bot=63+half_height
   
-  -- decide wheter to draw 
-  -- outline or slice
-  if x!=0 and tile!=last_tile then
-    -- draw outline slice
-    rectfill(x-1,63-last_half_height,x-1,63+last_half_height,0)
-    rectfill(x,top,x,bot,0)     
-  else       
-    -- draw wall slice
-    rectfill(x,top,x,bot,tile)
-    -- outline wall slice
-    pset(x,top,0)
-    pset(x,bot,0)
-  end
+    -- decide wheter to draw 
+    -- outline or slice
+    if x!=0 and tile!=last_tile then
+      -- draw outline slice
+      rectfill(x-1,63-last_half_height,x-1,63+last_half_height,0)
+      rectfill(x,top,x,bot,0)     
+    else       
+      -- draw wall slice
+      rectfill(x,top,x,bot,tile)
+      -- outline wall slice
+      pset(x,top,0)
+      pset(x,bot,0)
+    end
    
    -- sweep the ray
    ray.angle+=ray.angle_step
