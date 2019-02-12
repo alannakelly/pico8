@@ -55,40 +55,40 @@ fadetable={
 
 -- create a particle at ox, oy
 function particle(ox,oy,angle,colour) 
-		local speed=rnd(max_speed)
+    local speed=rnd(max_speed)
   return {
-  	x=ox,y=oy, -- origin
-  	a=angle, -- angle
-			vx=speed*cos(angle), -- velocity
-			vy=speed*sin(angle),
-			c=colour, -- colour
-			age=0, -- age - particles die at 16
-			fade=min_aging_rate+rnd(max_aging_rate-min_aging_rate) -- aging rate
-		} 
+    x=ox,y=oy, -- origin
+    a=angle, -- angle
+      vx=speed*cos(angle), -- velocity
+      vy=speed*sin(angle),
+      c=colour, -- colour
+      age=0, -- age - particles die at 16
+      fade=min_aging_rate+rnd(max_aging_rate-min_aging_rate) -- aging rate
+    } 
 end
 
 -- init particles
 function _init()
-		local angle=0
-		local colour=1
+    local angle=0
+    local colour=1
   for i=0,number-1 do
     -- inits a particle
     if rainbow then
-		    particles[i]=particle(origin.x,origin.y,(0.05-rnd(.1))+angle,colour)
-		    if i%200 == 0 then
+        particles[i]=particle(origin.x,origin.y,(0.05-rnd(.1))+angle,colour)
+        if i%200 == 0 then
         angle+=0.1
         colour+=1
-					 -- prevent illegal index       
+           -- prevent illegal index       
         if colour>15 then 
-        		colour=1
+            colour=1
         end
       end
-		  else
-		    -- explosion effect
-    		-- random angle
-    		angle=rnd(1.0)
-    		-- use yellow fade
-		    particles[i]=particle(origin.x,origin.y,rnd(1.0),10)
+      else
+        -- explosion effect
+        -- random angle
+        angle=rnd(1.0)
+        -- use yellow fade
+        particles[i]=particle(origin.x,origin.y,rnd(1.0),10)
     end
   end
 end
@@ -97,8 +97,8 @@ end
 function _update()
   -- update particles
   for i=0,number-1 do
-  		-- get a local reference
-  		-- for easier typing
+      -- get a local reference
+      -- for easier typing
     local p=particles[i]
     
     -- update position
@@ -111,25 +111,25 @@ function _update()
     -- check if particle is out
     -- of screen bounds or dead    
     if p.x < 0 or 
-    		p.x > 127 or 
-    		p.y < 0 or
-    		p.y > 127 or
-    		p.age > 15 then
-    		  -- respawn particle
-    		  -- need to update the 
-    		  -- table.
-    		  if rainbow then
-    		  		particles[i]=particle(origin.x,origin.y,p.a,p.c)
-				  		else
-				  				particles[i]=particle(origin.x,origin.y,rnd(1,0),10)
-				  		end
+        p.x > 127 or 
+        p.y < 0 or
+        p.y > 127 or
+        p.age > 15 then
+        -- respawn particle
+        -- need to update the 
+        -- table.
+        if rainbow then
+          particles[i]=particle(origin.x,origin.y,p.a,p.c)
+        else
+          particles[i]=particle(origin.x,origin.y,rnd(1,0),10)
+        end
       end
   end  
 end
 
 -- draws the particles
 function _draw()
-		cls()
+  cls()
   for i=0,number-1 do
     local p=particles[i]
     local colour=fadetable[p.c][flr(p.age)]
