@@ -58,7 +58,7 @@ Pull requests with bugfixes, modifications, documentation improvements and new e
 * [mouse](home/carts/mouse/README.md) - How to use mouse input in PICO-8.
 * [hextiles](home/carts/hextiles/README.md) - How to render hexagonal tiles using sprites.
 * [raycast](home/carts/raycast/README.md) - An implementation of a classic raycaster 3D engine.
-* [iso]](home/carts/iso/README.md) - A demonstration of videogame style isometic projection.
+* [iso](home/carts/iso/README.md) - A demonstration of videogame style isometic projection.
 
 ## Authors & Contributors
 
