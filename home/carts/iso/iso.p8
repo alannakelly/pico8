@@ -9,7 +9,6 @@ __lua__
 --------------------------------
 -- copyright (c) 2019         --
 -- alanna kelly               --
--- all rights reserverd.      --
 -- this file is part of       --
 -- "pico-8 examples" which is --
 -- released under the terms of--
