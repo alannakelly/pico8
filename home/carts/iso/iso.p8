@@ -1,5 +1,5 @@
 pico-8 cartridge // http://www.pico-8.com
-version 16
+version 43
 __lua__
 --------------------------------
 -- an example of a 'hacked'   --
@@ -7,7 +7,7 @@ __lua__
 -- projection - it's actually --
 -- a dimetric projection.     --
 --------------------------------
--- copyright (c) 2019         --
+-- copyright (c) 2025         --
 -- alanna kelly               --
 -- this file is part of       --
 -- "pico-8 examples" which is --

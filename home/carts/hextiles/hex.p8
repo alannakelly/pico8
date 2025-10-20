@@ -1,12 +1,12 @@
 pico-8 cartridge // http://www.pico-8.com
-version 16
+version 43
 __lua__
 --------------------------------
 -- a demonstration of drawing --
 -- a hex grid with a 2d array --
 -- and sprites.               --
 --------------------------------
--- copyright (c) 2019         --
+-- copyright (c) 2025         --
 -- alanna kelly               --
 -- this file is part of       --
 -- "pico-8 examples" which is --
